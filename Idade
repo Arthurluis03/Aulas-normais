@@ -1,0 +1,20 @@
+
+
+let iddma = 0 
+let iddme = 0
+   for(let cont = 1; cont<=3; cont++){
+    idade = +prompt("Qual a sua idade")
+    if(idade>=18){
+        iddma += 1
+     }
+     else{
+        iddme += 1
+     }
+   }
+   alert(`
+    Dados das idades: 
+    Quantidade de pessoas maior de idade: ${iddma}
+    Quantidade de pessoas menor de idade: ${iddme}
+    
+    `)
+
