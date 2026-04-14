@@ -1,0 +1,17 @@
+ function contar()
+ {
+    let cont
+    alert(`ordem Crescente: `)
+    for( cont = 1; cont <=10; cont++){
+        
+        alert(`${cont}  Repetição`)
+    }
+    alert(`ordem decrescente: `)
+    
+    for(let cont = 10; cont>=1; cont--){
+
+        
+        alert(`${cont}  Repetição`)
+    }
+
+}
