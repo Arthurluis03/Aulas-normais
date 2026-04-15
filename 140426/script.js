@@ -37,7 +37,7 @@ let total;
 
 switch (tipo.toLowerCase()) {
     case "funcionario":
-        total = preco * 0.9;
+        total = preco * 0.9; 
         alert("Funcionário tem 10% de desconto!\nTotal: R$ " + total.toFixed(2));
         break;
 
@@ -48,7 +48,7 @@ switch (tipo.toLowerCase()) {
 
     case "normal":
         total = preco;
-        alert("Cliente normal não tem desconto.\nTotal: R$ " + total.toFixed(2));
+        alert("Seja bem vindo cliente, espero que tenha gostado e volte sempre, o preço foi:\nTotal: R$ " + total.toFixed(2));
         break;
 
     default:
