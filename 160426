@@ -1,0 +1,28 @@
+///////////
+let nota 
+do {
+    nota = +prompt(`Digite a nota dos alunos:  `)
+    if (nota > 0 && nota <= 10 ){
+        alert(`Notas validas, registrado com sucesso `)
+    } else{
+        alert("Notas invalidas")
+    }
+}while(nota < 0 || nota > 10)
+/////////////
+let idade;
+do {
+    idade = +prompt("Para efetuar seu agendamento, primeiro me diga a sua idade:  ",);
+  if (idade >= 18) {
+    alert("Seja bem vindo, Você está pronto para fazer o agendamento!");
+    let agn = +prompt(`Digite o Dia que gostaria o agendamento: `);
+    if (agn >= 32 || agn < 0) {
+      alert("Data invalida, digite novamente");
+    } else {
+      alert(
+        `O agendamento foi concluido o dia é ${agn}, te esperamos no estabelecimento!`,
+      );
+      break;
+    }
+  } else {
+    alert("Desculpe, a carteira de habilitação é só para maiores de 18 anos")}
+} while (idade >= 18);
