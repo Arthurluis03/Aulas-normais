@@ -1,0 +1,22 @@
+for(let i = 1; i <= 5; i++) {
+    let nome = prompt("Digite o nome do carro");
+    dsdP.push(nome); 
+}
+alert(dsdP.join("\n"))
+
+alert("Atualização de modelos: ")
+ dsdP.shift()
+ dsdP.shift()
+for(let i = 1; i <= 4; i++) {
+    let nome = prompt("Digite os nome dos novos carros");
+    dsdP.push(nome); 
+} 
+ alert(dsdP.join("\n"))
+ alert("Adicionando marca, por gentileza, coloque o nome e o modelo separados por (--)")
+    dsdP.splice(0,1, prompt(`Digite a marca do ${dsdP[0]}`))
+    dsdP.splice(1,1, prompt(`Digite a marca do ${dsdP[1]}`))
+    dsdP.splice(2,1, prompt(`Digite a marca do ${dsdP[2]}`))
+    dsdP.splice(3,1, prompt(`Digite a marca do ${dsdP[3]}`))
+    dsdP.splice(4,1, prompt(`Digite a marca do ${dsdP[4]}`))
+    dsdP.splice(5,1, prompt(`Digite a marca do ${dsdP[5]}`))
+    alert(dsdP.join("\n"
