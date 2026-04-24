@@ -1,0 +1,18 @@
+
+function cadastro() {
+    let prg = prompt("Já tem cadastro?").toLowerCase();
+
+    if (prg === "sim") {
+        alert("Então por que está no cadastro inteligente, faça logo o login")
+    } else {
+        let novoUser = prompt(` Olá, Lembre-se de nao colocar nenhum usuario que ofenda até as micros-minorias então 
+        Novo usuário:`);
+        let novaSenha = prompt(`Lembre-se de crir uma senha que vá se lembrar, então 
+            Nova senha:`);
+
+        usuario.push(novoUser);
+        senha.push(novaSenha);
+
+        alert("Nice, sua conta foi criada, agora pode efetuar o login");
+    }
+}
