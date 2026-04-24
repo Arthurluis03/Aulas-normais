@@ -1,0 +1,211 @@
+
+
+// console.log(`
+//   DADOS DO LUFFY:
+//   Nome: ${dsdP[0]}  
+//   Idade: ${dsdP[1]}
+//   Altura: ${dsdP[2]} 
+// `)
+// console.log(`-------------------------`)
+// //serve para inserir novo elemento("Monkey D. Luffy: ฿ 3.000.000.000.")//3
+// dsdP.push("Monkey D. Luffy: ฿ 3.000.000.000.")
+// dsdP.push("Zoro ฿ 1.100.100.000") // 4
+// dsdP.push("Jinbe: ฿ 1.100.000.000 ") //5
+// dsdP.push("Sanji: ฿ 1.032.000.000")// 6
+// dsdP.push("Nico Robin: ฿ 930.000.000") // 
+
+// console.log(`
+//     Tripulação e suas recompensas
+//     Integrante: ${dsdP[0]}
+//     Integrante: ${dsdP[1]}
+//     Integrante: ${dsdP[2]}
+//     Integrante: ${dsdP[3]}
+//     Integrante: ${dsdP[4]}
+//     `)
+// /////////////////////////////
+// 
+
+let dsdP = []
+let numt = +prompt("digite o numero de produtos no total: ")
+for(let i = 1; i < numt; i++) {
+    let nome = prompt("Digite o nome do carro");
+    dsdP.push(nome); 
+}
+alert(dsdP.join("\n"))
+alert("Atualização de modelos: ")
+for(i=0; i<1; i++){
+let dlt = +prompt(`Escolha um dos veiculos para excluir:
+    1 - ${dsdP[i]}
+    2 - ${dsdP[dsdP.length - 4]}
+    3 - ${dsdP[dsdP.length - 3]}
+    4 - ${dsdP[dsdP.length - 2]}
+    5 - ${dsdP[dsdP.length - 1]}
+    `)
+ switch(dlt) {
+    case 1:
+         alert(`O produto ${dsdP[0]}, Foi excluido`)
+         dsdP.splice(0, 1);
+         break
+    case 2:
+        alert(`O produto ${dsdP[1]}, Foi excluido`)
+         dsdP.splice(1, 1);
+         break
+    case 3:
+        alert(`O produto ${dsdP[2]}, Foi excluido`)
+         dsdP.splice(2, 1);
+         break
+    case 4:
+        alert(`O produto ${dsdP[3]}, Foi excluido`)
+         dsdP.splice(3, 1);
+         break
+    case 5:
+        alert(`O produto ${dsdP[4]}, Foi excluido`)
+         dsdP.splice(4, 1);
+         break
+        
+    default: 
+        alert("Opção Invalida, por gentileza tente novamente")
+        break 
+ }
+ 
+ let dlt2 = +prompt(`Escolha um dos veiculos para excluir:
+    1 - ${dsdP[0]}
+    2 - ${dsdP[1]}
+    3 - ${dsdP[2]}
+    4 - ${dsdP[3]}
+    5 - ${dsdP[4]}
+    `)
+ switch(dlt2) {
+    case 1:
+        alert(`O produto ${dsdP[0]}, Foi excluido`)
+         dsdP.splice(0, 1);
+         break
+    case 2:
+        alert(`O produto ${dsdP[1]}, Foi excluido`)
+         dsdP.splice(1, 1);
+         break
+    case 3:
+        alert(`O produto ${dsdP[2]}, Foi excluido`)
+         dsdP.splice(2, 1);
+         break
+    case 4:
+        alert(`O produto ${dsdP[3]}, Foi excluido`)
+         dsdP.splice(3, 1);
+         break
+    case 5:
+        alert(`O produto ${dsdP[4]}, Foi excluido`)
+         dsdP.splice(4, 1);
+         break
+    default: 
+        alert("Opção Invalida, por gentileza tente novamente")
+        break 
+ }
+alert(dsdP.join("\n"))
+}
+for(let i = 1; i < 4; i++) {
+    let nome = prompt("Digite os nome dos novos carros");
+    dsdP.push(nome); 
+} 
+ alert(dsdP.join("\n"))
+alert("Adicionando marca, coloque nome e modelo separados por (--)");
+
+for (let i = 0; i < dsdP.length; i++) {
+    
+  dsdP.splice(i, 1, prompt(`Digite a marca do ${dsdP[i]}`));
+}
+alert(dsdP.join("\n"));
+
+
+
+
+
+
+
+
+// for(i=0; i<1; i++){
+// let dlt = +prompt(`Escolha um dos veiculos para excluir:
+//     1 - ${dsdP[0]}
+//     2 - ${dsdP[1]}
+//     3 - ${dsdP[2]}
+//     4 - ${dsdP[3]}
+//     5 - ${dsdP[4]}
+//     `)
+//  switch(dlt) {
+//     case 1:
+//         alert(`O produto ${dsdP[0]}, Foi excluido`)
+//          dsdP.splice(0, 1,"Carro Fora de estoque");
+//          dlt3 = dsdP[0]
+//          break
+//     case 2:
+//         alert(`O produto ${dsdP[1]}, Foi excluido`)
+//          dsdP.splice(1, 1, "Carro Fora de estoque");
+//          dlt3 = dsdP[1]
+//          break
+//     case 3:
+//         alert(`O produto ${dsdP[2]}, Foi excluido`)
+//          dsdP.splice(2, 1, "Carro Fora de estoque");
+//          dlt3 = dsdP[2]
+//          break
+//     case 4:
+//         alert(`O produto ${dsdP[3]}, Foi excluido`)
+//          dsdP.splice(3, 1, "Carro Fora de estoque");
+//          dlt3 = dsdP[3]
+//          break
+//     case 5:
+//         alert(`O produto ${dsdP[4]}, Foi excluido`)
+//          dsdP.splice(4, 1, "Carro Fora de estoque");
+//          dlt3 = dsdP[4]
+//          break
+//     default: 
+//         alert("Opção Invalida, por gentileza tente novamente")
+//         break 
+//  }
+ 
+//  let dlt2 = +prompt(`Escolha um dos veiculos para excluir:
+//     1 - ${dsdP[0]}
+//     2 - ${dsdP[1]}
+//     3 - ${dsdP[2]}
+//     4 - ${dsdP[3]}
+//     5 - ${dsdP[4]}
+//     `)
+//     if(dlt == dlt2 )
+//     {
+//         alert("opção invalida, escolha outra!")
+//         continue;
+//     }
+//  switch(dlt2) {
+//     case 1:
+//         alert(`O produto ${dsdP[0]}, Foi excluido`)
+//          dsdP.splice(0, 1, "Carro Fora de estoque");
+//          dlt4 = dsdP[0]
+//          break
+//     case 2:
+//         alert(`O produto ${dsdP[1]}, Foi excluido`)
+//          dsdP.splice(1, 1, "Carro Fora de estoque");
+//          dlt4 = dsdP[1]
+//          break
+//     case 3:
+//         alert(`O produto ${dsdP[2]}, Foi excluido`)
+//          dsdP.splice(2, 1, "Carro Fora de estoque");
+//          dlt4 = dsdP[2]
+//          break
+//     case 4:
+//         alert(`O produto ${dsdP[3]}, Foi excluido`)
+//          dsdP.splice(3, 1, "Carro Fora de estoque");
+//          dlt4 = dsdP[3]
+//          break
+//     case 5:
+//         alert(`O produto ${dsdP[4]}, Foi excluido`)
+//          dsdP.splice(4, 1, "Carro Fora de estoque");
+//          dlt4 = dsdP[4]
+//          break
+//     default: 
+//         alert("Opção Invalida, por gentileza tente novamente")
+//         break 
+//  }
+// alert(dsdP.join("\n"))
+//  dsdP.splice(dlt3, 1)
+// alert(dsdP.join("\n"))
+//  dsdP.splice(dlt4, 1)
+// alert(dsdP.join("\n"))
+// }
