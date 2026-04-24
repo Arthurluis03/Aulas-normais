@@ -1,0 +1,19 @@
+function Login(){
+        let userd = prompt("Por favor digite seu Usuário:");
+        let index = usuario.indexOf(userd);
+
+        if (index !== -1) {
+
+            let passd = prompt("Certo, agora digite a sua senha:");
+
+            if (senha[index] === passd) {
+                alert(`Tá bom, vc foi achado, sejam bem vindo(a)`);
+                window.location.href = "fnc.html";
+            } else {
+                alert("Ops, errou a sua senha");
+            }
+
+        } else {
+            alert("Putz, desconheço esse usuario, talvez precise criar um conta");
+        }
+}
