@@ -1,0 +1,20 @@
+
+function lmp(){
+    let exc = +prompt(`Deseja excluir todos os produtos colocados até então?
+        1 - sim
+        2 - não 
+        `)
+    switch(exc){
+    case 1:
+    alert("Lista apagada!")
+    dsdP.splice(0, dsdP.length);
+    break
+    case 2: 
+    alert("Operação cancelada")
+    break
+    default:
+    alert("Por gentileza, digite apenas, os numeros 1 e 2 para responder")
+    break
+    
+}
+}
