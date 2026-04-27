@@ -1,0 +1,52 @@
+
+function EDP() {
+
+    let estoque = +prompt("Digite o estoque inicial:")
+
+    let opcao
+
+    do {
+        opcao = prompt(
+            "Escolha uma opção:\n" +
+            "1 - Entrada de produtos\n" +
+            "2 - Saída de produtos\n" +
+            "3 - Consultar estoque\n" +
+            "4 - Verificar situação\n" +
+            "5 - Sair"
+        )
+
+        if (opcao == "1") {
+            let entrada = +prompt("Quantidade de entrada:")
+            estoque += entrada
+        }
+
+        else if (opcao == "2") {
+            let saida = +prompt("Quantidade de saída:")
+
+            if (saida > estoque) {
+                alert("Não tem estoque suficiente!")
+            } else {
+                estoque -= saida
+            }
+        }
+
+        else if (opcao == "3") {
+            alert("Estoque atual: " + estoque)
+        }
+
+        else if (opcao == "4") {
+            if (estoque == 0) {
+                alert("Sem estoque")
+            } 
+            else if (estoque <= 10) {
+                alert("Estoque baixo")
+            } 
+            else {
+                alert("Estoque adequado")
+            }
+        }
+
+    } while (opcao != "5")
+
+    alert("Programa encerrado")
+}
