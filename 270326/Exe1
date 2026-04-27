@@ -1,0 +1,140 @@
+// 1) Escreva um programa em javascript para calcular a área de diferentes formas geométricas. O programa deve iniciar com um menu contendo as diferentes opções de cálculas. 
+
+// As opções devem ser:
+// - área do triângulo: base * altura / 2
+// - área do retângulo: base * altura
+// - área do quadrado: lado²
+// - área do trapézio: (base maior + base menor) * altura / 2
+// - área do círculo: pi * raio² (considere pi = 3.14)
+
+// Você deve escrever o programa usando funções sempre que possível para separar os procedimentos. O programa também deve ter uma opção de “Sair” e enquanto ela não for escolhida deverá voltar ao menu.
+
+
+let x = []
+let y = []
+function num(){
+     alert("Bem vindo a calculadora aritmética web")
+     let xd = +prompt("Primerio digite o nosso X que será o nosso primeiro valor: ")
+     if (xd > 0 && xd != ""){
+        x.push(xd)
+     }
+     let yd = +prompt("Primerio digite o nosso Y que será o nosso primeiro valor: ")
+     if (yd > 0 && yd != ""){
+        y.push(yd)
+     }
+ }
+ function teste(){
+    alert(x.join("\n"))
+    alert(y.join("\n"))
+ }
+ function calcularR(){
+         let perguntad = (prompt("Aopa meu amigo, vamos calcular a area de um retângulo, Deseja usar os valores X e Y definidos em numero? ") || "").toLowerCase()
+          if (perguntad == 'sim'){
+            alert("Lembra de definir o X e o Y, caso esqueça quais valores colocou, temos o botão teste, que mostrará em sequencia o valor de X após o valor Y")
+            let medi = (prompt("Você quer que a medida seja em cm2 ou m2 ") || "").toLowerCase()
+            if(medi == "cm2"){
+            let resultado = x * y 
+            alert("A area do retângulo é " + resultado + " cm²")
+            } else if (medi == "m2") { 
+                let resultado = x * y 
+                alert("A area do retângulo é " + resultado + " m²")
+            } 
+        else 
+        {
+            alert("Por favor escolha ou cm2 ou m2")
+        }
+         } 
+         
+         }
+ function calcularT(){
+        let perguntad = (prompt("Aopa meu amigo, vamos calcular a area de um triângulo, Deseja usar os valores X e Y definidos em numero? ") || "").toLowerCase()
+        let medi = (prompt("Você quer que a medida seja em cm2 ou m2 ") || "").toLowerCase()
+         if (perguntad == 'sim'){
+            alert("Lembra de definir o X e o Y, caso esqueça quais valores colocou, temos o botão teste, que mostrará em sequencia o valor de X após o valor Y")
+            
+            if(medi == "cm2"){
+            let resultado = x * y / 2
+            alert("A area do triângulo é " + resultado + " cm²")
+            }
+            else if( medi == "m2") { 
+            let resultado = x * y 
+            alert("A area do triangulo é " + resultado + " m²")
+        } else {
+            alert("Por favor escolha ou cm2 ou m2")
+        }
+         } 
+}
+  function calcularQ(){
+    
+        alert("Aopa meu amigo, vamos calcular a area de um Quadrado, O quadrado é L x L, então escolha o valor X ou o valor Y para continuar-mos ")
+        let xoy = (prompt("Escolha um valor fixo, X ou Y") || "").toLowerCase()
+        if (xoy == "y" || xoy == "Y") {
+            let medi = (prompt("Você quer que a medida seja em cm2 ou m2 ") || "").toLowerCase()
+            if(medi == "cm2"){
+            let resultado = y * y 
+            alert("A area do Quadrado é " + resultado + " cm²")
+            }
+            else if
+            ( medi == "m2") { 
+            let resultado = y * y 
+            alert("A area do Quadrado é " + resultado + " m²")
+        } 
+        else
+        {
+            alert("Por favor escolha ou cm2 ou m2")
+        }
+         } 
+         if (xoy == "X" || xoy == "x") {
+            let medi = (prompt("Você quer que a medida seja em cm2 ou m2 ") || "").toLowerCase()
+            if(medi == "cm2"){
+            let resultado = x * x 
+            alert("A area do Quadrado é " + resultado + " cm²")
+            }
+            else if
+            ( medi == "m2") { 
+            let resultado = x * x 
+            alert("A area do Quadrado é " + resultado + " m²")
+        } 
+        else
+        {
+            alert("Por favor escolha ou cm2 ou m2")
+        }
+         } 
+        }
+         
+    function calcularTP(){ 
+        alert("Olá, seja bem vindo, vamos calcular a area do trapézio, aqui nao usaremos valores definidos")
+        let bma = +prompt("Primeiro vamos definir a base maior")
+        let bme = +prompt("Primeiro vamos definir a base menor")
+        let h = +prompt("Agora vamos definir a altura")
+        let medi = (prompt("Nice está quase tudo pronto, Você quer que a medida seja em cm2 ou m2") || "").toLowerCase()
+            if(medi == "cm2"){
+            let resultado = (bma * bme) * h / 2
+            alert("A area do Quadrado é " + resultado + " cm²")
+            }
+            else if
+            ( medi == "m2") { 
+            let resultado = (bma * bme) * h / 2
+            alert("A area do Quadrado é " + resultado + " m²")
+        }
+        
+    }
+    //área do círculo: pi * raio² (considere pi = 3.14)
+    function calcularC(){
+        alert("Aqui subimos o nivel, Area de um circulo ")
+        let pi = 3.14
+        let raio = +prompt("Qual o raio do circulo? ")
+        let medi = (prompt("Nice está quase tudo pronto, Você quer que a medida seja em cm2 ou m2") || "").toLowerCase()
+            if(medi == "cm2"){
+            let resultado = pi * (raio *2)
+            alert("A area do Quadrado é " + resultado + " cm²")
+            }
+            else if
+            ( medi == "m2") { 
+            let resultado = pi * (raio *2)
+            alert("A area do Quadrado é " + resultado + " m²")
+        }
+    }
+
+  
+ 
