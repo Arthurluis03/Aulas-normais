@@ -1,0 +1,74 @@
+let dsdP = []
+
+function teste(){
+    return dsdP.join("\n")
+}
+
+function salario() {
+    
+    let opcao
+
+    do {
+        opcao = prompt(
+            "Escolha uma opção:\n" +
+            "1 - Calcular salario liquido\n" +
+            "2 - Exibir resumo do calculo \n" +
+            "3 - sair\n" 
+        )
+
+        if (opcao == "1") {
+
+            let hr = +prompt("Quantas horas você trabalhou?")
+            let vhr = +prompt("Qual o valor da sua hora? ")
+
+            let slb = vhr * hr  
+
+            // 8% 9% 11%
+            let inss = 0
+            if (slb <= 1500) {
+                inss = slb * 0.08
+            } else if (slb <= 3000) {
+                inss = slb * 0.09
+            } else {
+                inss = slb * 0.11
+            }
+
+            // 6%
+            let vt = slb * 0.06
+
+            // bonus q só funciona dps das 160
+            let bonus = 0
+            if (hr > 160) {
+                bonus = slb * 0.05
+            }
+
+            
+            let liquido = slb - inss - vt + bonus
+
+           
+            dsdP = [
+                "Horas trabalhadas: " + hr,
+                "Valor da hora: " + vhr,
+                "Salário bruto: " + slb.toFixed(2),
+                "INSS: -" + inss.toFixed(2),
+                "Vale transporte: -" + vt.toFixed(2),
+                "Bônus: +" + bonus.toFixed(2),
+                "Salário líquido: " + liquido.toFixed(2)
+            ]
+
+            alert("Salário líquido: " + liquido.toFixed(2))
+
+        }  
+
+        else if (opcao == "2") {
+            if (dsdP.length === 0) {
+                alert("Nenhum cálculo realizado ainda.")
+            } else {
+                alert(teste())
+            }
+        }
+
+    } while (opcao != "3")
+
+    alert("Programa encerrado")
+}
