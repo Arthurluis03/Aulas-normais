@@ -1,0 +1,105 @@
+// 3) Sistema de Votação com Apuração ####
+
+// Escreva um programa em JavaScript que simule um sistema de votação.
+
+// O programa deve iniciar com um menu contendo as opções:
+
+// Votar
+// Exibir resultado
+// Resetar votação
+// Sair
+
+// Opções de voto:
+
+// Candidato A
+// Candidato B
+// Candidato C
+// Voto em branco
+
+// Regras:
+
+// Cada voto deve ser contabilizado
+// O programa deve calcular:
+// total de votos
+// percentual de cada candidato
+// vencedor da eleição
+// Em caso de empate, informar que houve empate
+
+// Utilize funções para cada operação.
+// O programa deve permanecer em execução até o usuário escolher “Sair”.
+function votar(){
+let opcao
+let A = 0
+let B = 0
+let C = 0
+    do {
+        opcao = prompt(
+            "Escolha uma opção:\n" +
+            "1 - Votar\n" +
+            "2 - Exibir votos\n" +
+            "3 - Resetar votos\n" +
+            "4 - Sair\n" 
+            
+        )
+
+        if (opcao == "1") {
+            let voto = (prompt("Deseja votar no canditado A, canditado B, ou candidato C? ") || "").toLocaleLowerCase()
+            if (voto == "a"){
+                
+                let conf = (prompt("Você confirma seu voto em " + voto + " ?") || "").toLocaleLowerCase()
+                if (conf = 'sim'){
+                    alert("Parabens Você votou em " + voto)
+                    alert("Voto contabilizado")
+                    A++
+                }else {
+                    alert("Selecione novamente")
+                    break
+                }
+            }
+            if (voto == "b"){
+                
+                let conf = (prompt("Você confirma seu voto em " + voto + " ?") || "").toLocaleLowerCase()
+                if (conf = 'sim'){
+                    alert("Parabens Você votou em " + voto)
+                    alert("Voto contabilizado")
+                    B++
+                }else {
+                    alert("Selecione novamente")
+                    break
+                }
+            }
+            if (voto == "c"){
+                
+                let conf = (prompt("Você confirma seu voto em " + voto + " ?") || "").toLocaleLowerCase()
+                if (conf = 'sim'){
+                    alert("Parabens Você votou em " + voto)
+                    alert("Voto contabilizado")
+                    C++
+                } else {
+                    alert("Selecione novamente")
+                    break
+                }
+            }
+        }
+
+        else if (opcao == "2") {
+            alert(`Votação 
+                1 - Candidado A = ${A}
+                2 - Candidado B = ${B}
+                3 - Candidado C = ${C}
+                `)
+        }
+
+        else if (opcao == "3") {
+            alert("Votos resetados")
+              A = A - A
+              B = B - B
+              C = C- C
+        }
+
+       
+
+    } while (opcao != "4")
+
+    alert("Programa encerrado")
+}
