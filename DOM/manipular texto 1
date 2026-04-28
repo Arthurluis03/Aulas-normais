@@ -8,6 +8,38 @@
 // document.querySelectorAll("todos elementos")
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="script.js"></script>
+</head>
+<body id="body">
+    <h1 id="titulo"
+     onclick="manT()"
+     onmousemove="mover()"
+     onmouseout="tm()"
+     >
+        Clique para ver o melhor
+    </h1>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
 
 function mudar(){
      let txt1 = "Preto"
