@@ -1,0 +1,27 @@
+// // seleciona a tag
+// document.querySelector("tag")
+// // seleciona a classe
+// document.querySelector(".classe")
+// // seleciona ID 
+// document.querySelector("#id")
+// // seleciona tudo, em geral todos os elementos
+// document.querySelectorAll("todos elementos")
+
+
+
+function mudar(){
+     let txt1 = "Preto"
+     let txt2 = 'Branco'
+     const id = document.getElementById('titulo')
+     // id.innerText = "Palmeiras vai ganhar a libertadores 2026"
+     if(id.innerText == txt1){
+          id.innerText = txt2
+          document.body.style.backgroundColor = 'white'
+          id.style.color = 'black'
+     } else {
+          id.innerText = txt1
+          document.body.style.backgroundColor = 'black'
+          id.style.color = 'white'
+     }
+}
+
