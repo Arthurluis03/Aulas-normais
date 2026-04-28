@@ -1,0 +1,16 @@
+const buttonContent = document.querySelector('.content')
+const buttonInner =  document.querySelector('.inner')
+
+const divText = document.getElementById('exemplo')
+
+buttonContent.addEventListener('click', mt1)
+
+function mt1(){
+    let paragrafo = document.querySelector('.result-text-content')
+    paragrafo.textContent = divText.textContent
+}
+buttonContent.addEventListener('click', mt2)
+function mt2(){
+    let paragrafo = document.querySelector('.result-inner-text')
+    paragrafo.innerText = divText.innerText
+}
