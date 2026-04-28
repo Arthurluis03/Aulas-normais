@@ -1,3 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+     <div class="exemplo">
+        Olá
+        <span style="display: none;">Mundo</span>
+     </div> 
+     <p class="result-text-content"></p>
+     <p class="result-inner-text"></p>
+
+     <button class="content">textContent</button>
+     <button class="innerText">InnerContent</button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
 const buttonContent = document.querySelector('.content')
 const buttonInner =  document.querySelector('.inner')
 
