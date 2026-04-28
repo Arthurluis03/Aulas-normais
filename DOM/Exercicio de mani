@@ -1,0 +1,36 @@
+
+function mudar(){
+     let txt1 = "Branco"
+     let txt2 = 'Preto'
+     const id = document.getElementById('tema')
+     // id.innerText = "Palmeiras vai ganhar a libertadores 2026"
+     if(id.innerText == txt1){
+          id.innerText = txt2
+          document.body.style.backgroundColor = 'white'
+          id.style.background = 'white'
+          id.style.color = 'black'
+          id.style.width = '200px'
+          id.style.display = 'flex'
+          id.style.fontSize = '50px'
+          id.style.margin = '0 auto'
+          id.style.alignItems = 'center'
+          id.style.justifyContent = 'center'
+          id.style.height = '10vh'
+          
+          
+
+
+     } else {
+          id.innerText = txt1
+          document.body.style.backgroundColor = 'black'
+          id.style.background = 'black'
+          id.style.color = 'white'
+          id.style.width = '200px'
+          id.style.fontSize = '50px'
+          id.style.display = 'flex'
+          id.style.margin = '0 auto'
+          id.style.alignContent = 'center'
+          id.style.justifyContent = 'center'
+          id.style.height = '10vh'
+     }
+}
