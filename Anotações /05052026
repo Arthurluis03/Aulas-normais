@@ -1,0 +1,141 @@
+document.getElementById('meuElemento')
+
+
+classlist:
+é possível adicionar ou remover N classes de uma vez, usando add(), ou remove(), toggle() e por ai vai
+pode mexer com varias classes de uma vez
+
+document.getElementById('qualquer-coisa')
+qualquer-coisa.classList.add('class1, class2, class');
+qualquer-coisa.classList.remove('class1, class2, class');
+
+
+foreach: constantemente selecionamos uma lista de itens no DOM, a melhor forma para interagirmos com os mesmo é utilizando o método forEach.
+
+ const imgs == document.querySelectorAll('Img')
+
+imgs.forEach(function(item){
+   console.log('item')
+});
+
+// aqui ele cria uma constante com todas as imagens, depos ele vai pro forEarch após abre a função, tudo dentro do parênteses e faz a função ali dentro e fé
+
+
+
+
+forEach é método array, alguns objetos do tipo array, (querySelectorAll) possuem este método, caso não possua, o ideal é transforma-lo em uma array
+
+
+const títulos = document.getElementsByClassName('titulo')
+const titulosArray = Array.from(títulos)
+
+titulosArray.forEach(function(item){
+  console.log(item)
+}
+
+
+
+só tem essas duas formas de "legais" de fazer isso
+usando o querySelectorAll ou transformando em uma array, não estranhe se ver
+
+
+
+
+
+
+data-contexto ----
+ 
+é mais simples estar pegando pelo data contexto, mas também usar as classes, por exemplo usar a classe app__card-button com um data-contexto = "nome_"
+
+por exemplo, temos mais de um objeto na classe app_card-button, e diferenciar pelo data
+
+
+só usar o 'data' se for para pegar dados e executar algo diferente 
+
+
+
+
+Arrow function:
+
+ela é nova, pode utilizar a antiga, porem tem essa forma com menos linhas de código:
+
+-- forma diferente de definir uma função
+
+-- objetivo, facilitar a praticidade na hora de declarar função
+
+
+sintaxe dela é muito simples
+
+() => {
+   conteudo
+}
+
+
+
+ a função arrow pode usar assim 
+
+const app = ()=>{
+    // codigo da funcão 
+}
+
+
+
+ex2: caso eu tenha apenas parâmetro, eu posso retirar os parênteses
+
+const mensagem = texto => texto
+
+
+///
+
+Manipulação de atributos 
+
+
+só usar o 'data' se for para pegar dados e executar algo diferente 
+
+sintaxe é data-qualquernome = "nome"
+
+
+sempre começa com data, após você coloca o nome
+
+
+elemnt.dataset
+
+padrões de uso no mercado:
+
+1- Controle de estado 
+ex: ativos
+
+2 - Identificação de elementos
+ex: id dinamicos
+
+3- configuração de comportamento
+ex: ações, eventos
+
+4 - integração com frameworks
+ex: boostrap
+
+regra pratica (quando usar o atributo data)
+
+Se a duvida for:
+eu preciso guardar um valor nesse elemento JS
+
+sim -- Data
+
+não -- Class
+
+
+Tabela simplificada : 
+
+elemento único - 'id'
+
+estilizar elemento - 'class'
+
+guardar informações para o JS - 'data-*'
+
+
+
+
+
+
+
+
