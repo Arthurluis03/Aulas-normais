@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <p>Olá, <h1></h1></p>
+    
+    <div class="ht__permitir">
+         <button data-criativa="Manhã" class="button">Manhã</button>
+         <button data-criativa="Tarde" class="button">Tarde</button>
+         <button data-criativa="Noite" class="button">Noite</button>
+    </div>
+</body>
+</html>
