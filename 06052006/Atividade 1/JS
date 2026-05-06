@@ -1,0 +1,34 @@
+// EXERCÍCIO 1 — Troca de texto
+// Objetivo
+// Usar dataset para mudar um texto na tela.
+// Regras
+// Crie 3 botões:
+// o “Manhã”
+// o “Tarde”
+// o “Noite”
+// • Cada botão deve ter um data-periodo
+// • Ao clicar, altere um <h1> com a mensagem correspondente
+// Exemplo de lógica esperada
+// • manhã → “Bom dia”
+// • tarde → “Boa tarde”
+// • noite → “Boa noite”
+
+  const botão = document.querySelectorAll('.button');
+  const h1 = document.querySelector('h1');
+   botão.forEach((button) => {
+   button.addEventListener('click', () => {
+    const hr = button.dataset.criativa.toLowerCase();
+    if(hr =='manhã' || hr == 'manha'){
+        h1.textContent = 'Bom dia';
+    }
+    else if(hr == 'tarde'){
+        h1.textContent = 'Boa tarde fi';
+    } else if(hr == 'noite'){
+        h1.textContent = 'Boa noite';
+    } else {
+        h1.textContent = 'Invalido, selecione novamente';
+    }
+     
+   })
+})
+  
