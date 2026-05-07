@@ -1,0 +1,25 @@
+    // EXERCÍCIO 4 — Sistema de abas (tabs)
+    // Objetivo
+    // Relacionar elementos usando dataset
+    // Regras
+    // • Botões com data-aba="1", "2", "3"
+    // • Divs com data-conteudo="1", "2", "3"
+    // Desafio
+    // • Ao clicar:
+    // o Esconde todos os conteúdos
+    // o Mostra apenas o correspondente
+    const botoes = document.querySelectorAll('[data-aba]');
+    const conteudos = document.querySelectorAll('[data-conteudo]');
+    const pa = document.querySelector('.p');
+    botoes.forEach(botao => {
+        botao.addEventListener('click', () => {
+            const aba = botao.dataset.aba;
+            conteudos.forEach(conteudo => {
+                if (conteudo.dataset.conteudo === aba) { 
+                    conteudo.style.display = 'block';
+                } else {
+                    conteudo.style.display = 'none';
+                }
+            });
+        });
+    });
