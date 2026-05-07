@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+</head>
+<body> <p class="p">Selecione a Aba</p>
+         <div data-conteudo="1">
+            <button data-aba="1">Aba 1</button>
+         </div>
+
+        <div data-conteudo="2">
+        <button data-aba="2">Aba 2</button>
+        </div>
+
+         <div data-conteudo="3">
+            <button data-aba="3">Aba 3</button>
+        </div>
+</body>
+</html>
