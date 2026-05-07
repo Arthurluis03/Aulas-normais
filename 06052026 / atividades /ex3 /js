@@ -1,0 +1,21 @@
+// Objetivo
+// Controlar estado visual
+// Regras
+// • Crie 4 botões (ex: planos de assinatura)
+// • Cada botão tem data-plano
+// • Ao clicar:
+// o Remove a classe ativo de todos
+// o Adiciona no clicado
+// • Mostre embaixo qual plano foi escolhido (em texto)
+const botoes = document.querySelectorAll('button[data-plano]');
+
+const Pl_esc = document.querySelector('.resultado');
+
+botoes.forEach(botao => { 
+    botao.addEventListener('click', () => {
+        botoes.forEach(btn => btn.classList.remove('ativo'));
+        botao.classList.add('ativo');
+        const planoEscolhido = botao.getAttribute('data-plano');
+        Pl_esc.textContent = `Plano escolhido: ${planoEscolhido}`;
+    });
+});
