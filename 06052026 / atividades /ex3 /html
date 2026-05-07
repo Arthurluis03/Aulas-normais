@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+     <div class="plano">
+        <p class="resultado">Nenhum plano escolhido</p>
+        <button data-plano="normal" class="btn">Plano normal</button>
+        <button data-plano="premium" class="btn">Plano premium</button>
+        <button data-plano="elite" class="btn">Plano elite</button>
+        <button data-plano="platinum" class="btn">Plano platinum</button>
+     </div>
+</body>
+</html>
