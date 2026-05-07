@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+</head>
+<body data-cor="body">
+    
+    <h1>Fundo</h1>
+    <div class="ht__fundo">
+        <button data-cor='red' class="btn">Vermelho</button>
+        <button data-cor='blue' class="btn">Azul</button>
+        <button data-cor='green' class="btn">Verde</button>
+    </div>
+</body>
+</html>
