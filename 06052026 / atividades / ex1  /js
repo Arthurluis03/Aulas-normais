@@ -1,0 +1,22 @@
+// EXERCÍCIO 2 — Troca de cor de fundo
+// Objetivo
+// Controlar o estilo usando dataset
+// Regras
+// • Crie 3 botões com:
+// o data-cor="red"
+// o data-cor="blue"
+// o data-cor="green"
+// • Ao clicar, mude o background do body
+// Regra importante
+// • Não use if
+// • Use diretamente o valor do dataset
+const botoes= document.querySelectorAll('.btn');
+const body = document.body;
+
+ botoes.forEach(botao => {
+    botao.addEventListener('click', () => {
+        const cBody = botao.dataset.cor;
+        body.style.backgroundColor = cBody;
+        
+    }
+ )})
