@@ -3,7 +3,6 @@ const titulos = document.querySelector('.app__title')
 const html = document.documentElement /* Trazendo elemento html fora do body */
 const botoes = document.querySelectorAll('.app__card-button[data-contexto]')
 
-
 botoes.forEach(itemBotoes => {
     itemBotoes.addEventListener('click', () => {
         let contexto = itemBotoes.dataset.contexto
@@ -25,12 +24,15 @@ function alterarConteudos(contexto, botaoClicado) {
 
     // Atualizando as imagens
     banner.src = `imagens/${contexto}.png`
-
+    //
+    let app__timer = 60
+    // tentativa de mudança de tempo
+    
     switch (contexto) {
         case 'foco':
+
             alarme.style.background = `linear-gradient(180deg, #8B1FF8 0%, #041832 48.44%, #01080E 100%)`
             alarme.style.boxShadow = '0 0 40px rgba(139, 31, 248, 0.6)';
-
             titulos.innerHTML = `
             Otimize sua produtividade,<br>
             <strong class="app_title-strong"> mergulhe no que importa. </strong>
@@ -39,10 +41,8 @@ function alterarConteudos(contexto, botaoClicado) {
             break;
 
         case 'descanso-curto':
-            alarme.style.background = 'linear-gradient(180deg, #0F725C 0%, #041832 48.44%, #01080E 100%)'
             alarme.style.boxShadow = '0 0 40px rgba(15, 114, 92, 0.6)';
             titulos.innerHTML = `
-
             Otimize sua produtividade,<br>
             <strong class="app_title-strong">
                 Faça uma pausa curta!
@@ -78,8 +78,9 @@ let p = document.querySelector('.app__card-second-button')
 btn.addEventListener('click', iniciarTimer)
 p.addEventListener('click', pararTimer)
 
+let tempoDecorrido = 5
+
 // Variável de referencia para guardar o timer
-let tempoDecorrido = 500 // Millisegundos
 
 function mostrarTimer(){
     // Instanciando objeto Date para manipular o temporizador
@@ -89,15 +90,16 @@ function mostrarTimer(){
     
 }
 mostrarTimer()
-let som = new Audio ('sons/01-02.mp3') // coloquei a musica que queria, mas pode ser qualquer uma
+let mPlay = new Audio ('../fokus/sons/play.wav')
+let mPause = new Audio ('../fokus/sons/pause.mp3') 
+let som = new Audio ('../fokus/sons/0102.mp3') // coloquei a musica que queria, mas pode ser qualquer uma
 let alarme = document.querySelector('.app_card-second-button-alarm')
-
+let mMusica = new Audio ('../fokus/sons/Musica.mp3')
 
 function decrescerTimer() {
     if (tempoDecorrido <= 0) {
         p.innerHTML = 'Parar alarme'
         pararTimer()
-        som.currentTime = 14
         alarme.classList.add('active')
         som.play()
         return 
@@ -105,9 +107,6 @@ function decrescerTimer() {
     tempoDecorrido -= 1
     mostrarTimer(); 
 } 
-       
-
-
 
 //// alarme 
         alarme.addEventListener('click', () => {
@@ -118,9 +117,20 @@ function decrescerTimer() {
 
 let idTimer
 let rodando = false
-
 function iniciarTimer() {
+    
     if (rodando) return // isso vai verificar se está rodando ou nao, no caso, se for true ele retorna, se for false ele continua
+    mPlay.play() 
+    if (msc == true) {
+        mMusica.play()
+    } else {
+        mMusica.pause()
+    }
+    // se a variável msc for true, ou seja, se a música tiver sido ativada, ela vai tocar quando o timer começar
+
+    
+    
+    
     
     // Essa parte esconde o botão 'começar' e mostra o botão 'parar'
     p.parentElement.style.display = 'flex'
@@ -135,7 +145,8 @@ function iniciarTimer() {
 function pararTimer() {
     clearInterval(idTimer)
     rodando = false
-    
+    mMusica.pause()
+    mPause.play()
     p.parentElement.style.display = 'none'
     btn.parentElement.style.display = 'flex' 
 
@@ -155,4 +166,9 @@ function pararTimer() {
     //     } 
     // })
 
+    let msc = false
+    let msc_app = document.querySelector('.app__card-list-item')
+    msc_app.addEventListener('click', () => {
+        msc = !msc 
+    })
     
