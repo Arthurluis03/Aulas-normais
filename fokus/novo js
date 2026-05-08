@@ -28,23 +28,32 @@ function alterarConteudos(contexto, botaoClicado) {
 
     switch (contexto) {
         case 'foco':
+            alarme.style.background = `linear-gradient(180deg, #8B1FF8 0%, #041832 48.44%, #01080E 100%);
+`       
+            alarme.style.boxShadow = '0 0 40px rgba(139, 31, 248, 0.6)';
             titulos.innerHTML = `
             Otimize sua produtividade,<br>
             <strong class="app_title-strong">mergulhe no que importa.
             </strong>
+            )'}
             `
             break;
 
         case 'descanso-curto':
+            alarme.style.background = 'linear-gradient(180deg, #0F725C 0%, #041832 48.44%, #01080E 100%)'
+            alarme.style.boxShadow = '0 0 40px rgba(15, 114, 92, 0.6)';
             titulos.innerHTML = `
             Otimize sua produtividade,<br>
             <strong class="app_title-strong">
                 Faça uma pausa curta!
             </strong>
+            
             `
             break;
 
         case 'descanso-longo':
+            alarme.style.background = 'linear-gradient(180deg, #1875E9 0%, #041832 48.44%, #01080E 100%)'
+            alarme.style.boxShadow = '0 0 40px rgba(24, 117, 233, 0.6)';
             titulos.innerHTML = `
             Otimize sua produtividade,<br>
             <strong class="app_title-strong">
@@ -64,10 +73,13 @@ let btn = document.querySelector('.app__card-primary-button')
 let p = document.querySelector('.app__card-second-button')
 
 
+// ERRO DUAS VEZES, É MUITA BURRICE
+
 btn.addEventListener('click', iniciarTimer)
 p.addEventListener('click', pararTimer)
+
 // Variável de referencia para guardar o timer
-let tempoDecorrido = 5 // Millisegundos
+let tempoDecorrido = 1 // Millisegundos
 
 function mostrarTimer(){
     // Instanciando objeto Date para manipular o temporizador
@@ -77,7 +89,7 @@ function mostrarTimer(){
     
 }
 mostrarTimer()
-let som = new Audio ('sons/01-02.mp3')
+let som = new Audio ('sons/01-02.mp3') // coloquei a musica que queria, mas pode ser qualquer uma
 let alarme = document.querySelector('.app_card-second-button-alarm')
 
 
@@ -86,9 +98,7 @@ function decrescerTimer() {
         p.innerHTML = 'Parar alarme'
         pararTimer()
         som.currentTime = 14
-        // Parte do alarme css
         alarme.classList.add('active')
-       
         som.play()
         return 
     }
@@ -110,13 +120,15 @@ let idTimer
 let rodando = false
 
 function iniciarTimer() {
-    if (rodando) return
+    if (rodando) return // isso vai verificar se está rodando ou nao, no caso, se for true ele retorna, se for false ele continua
+    
+    // Essa parte esconde o botão 'começar' e mostra o botão 'parar'
     p.parentElement.style.display = 'flex'
     btn.parentElement.style.display = 'none'
     
-    
+    // aqui o timer começa a rodar, ele chama a função decrescerTimer a cada 1000 milisegundos, ou seja, a cada 1 segundo
     idTimer = setInterval(decrescerTimer, 1000)
-    rodando = true
+    rodando = true 
 }
 
 
