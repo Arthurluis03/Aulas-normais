@@ -35,7 +35,7 @@ html {
 
 body {
     min-height: 100vh;
-    background: url("../Forkus/imagens/pattern.png");
+    background: url("/imagens/pattern.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -225,11 +225,73 @@ h1, h2, h3, h4, h5, h6 {
     left: 3rem;
 }
 
+.app__card-second-button-wrapper {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.app__card-second-button-wrapper.active {
+    display: flex;
+}
+.app__card-second-button{
+    padding: 0.8rem;
+    width: 12rem;
+    color: var(--color-secondary);
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+    border-radius: 3.2rem;
+    background: var(--linear-botes);
+    margin-top: 3.2rem;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
 .toggle-checkbox {
     position: absolute;
     visibility: hidden;
 }
 
+
+.h1 {
+    font-size: 2.2rem;
+}
+.app_card-second-button-alarm button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.app_card-second-button-alarm{
+
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--linear-botes);
+    background: var(--linear-botes);
+    font-weight: bold;
+    font-size: xx-large;
+    font-size: 2rem;
+    border-radius: 50px;
+    padding: 84px 116px;
+    max-width: 800px;
+    max-height: 400px;
+
+    /* sombra amarela desfocada */
+    box-shadow: 0 0 60px rgba(139, 31, 248, 0.6);
+            
+            
+}
+
+.app_card-second-button-alarm.active {
+    display: block;
+}
 /* fim - toggle */
 
 /* Para Tablets */
@@ -251,5 +313,11 @@ h1, h2, h3, h4, h5, h6 {
 
     .app__card-timer {
         font-size: 6rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .app__card-second-button {
+        width: 90%;
     }
 }
