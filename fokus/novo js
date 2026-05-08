@@ -28,21 +28,21 @@ function alterarConteudos(contexto, botaoClicado) {
 
     switch (contexto) {
         case 'foco':
-            alarme.style.background = `linear-gradient(180deg, #8B1FF8 0%, #041832 48.44%, #01080E 100%);
-`       
+            alarme.style.background = `linear-gradient(180deg, #8B1FF8 0%, #041832 48.44%, #01080E 100%)`
             alarme.style.boxShadow = '0 0 40px rgba(139, 31, 248, 0.6)';
+
             titulos.innerHTML = `
             Otimize sua produtividade,<br>
-            <strong class="app_title-strong">mergulhe no que importa.
-            </strong>
-            )'}
+            <strong class="app_title-strong"> mergulhe no que importa. </strong>
             `
+
             break;
 
         case 'descanso-curto':
             alarme.style.background = 'linear-gradient(180deg, #0F725C 0%, #041832 48.44%, #01080E 100%)'
             alarme.style.boxShadow = '0 0 40px rgba(15, 114, 92, 0.6)';
             titulos.innerHTML = `
+
             Otimize sua produtividade,<br>
             <strong class="app_title-strong">
                 Faça uma pausa curta!
@@ -79,7 +79,7 @@ btn.addEventListener('click', iniciarTimer)
 p.addEventListener('click', pararTimer)
 
 // Variável de referencia para guardar o timer
-let tempoDecorrido = 1 // Millisegundos
+let tempoDecorrido = 500 // Millisegundos
 
 function mostrarTimer(){
     // Instanciando objeto Date para manipular o temporizador
