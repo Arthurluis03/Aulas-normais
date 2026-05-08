@@ -61,10 +61,11 @@ function alterarConteudos(contexto, botaoClicado) {
 // Início codificação Temporizador
 const exibirTimerApp = document.getElementById('timer')
 let btn = document.querySelector('.app__card-primary-button')
-let p = document.querySelector('.app__card-primary-button')
+let p = document.querySelector('.app__card-second-button')
 
 
 btn.addEventListener('click', iniciarTimer)
+p.addEventListener('click', pararTimer)
 // Variável de referencia para guardar o timer
 let tempoDecorrido = 5 // Millisegundos
 
@@ -76,35 +77,61 @@ function mostrarTimer(){
     
 }
 mostrarTimer()
-let som = new Audio ('sons/branquelas.mp3')
+let som = new Audio ('sons/01-02.mp3')
+let alarme = document.querySelector('.app_card-second-button-alarm')
+
 
 function decrescerTimer() {
     if (tempoDecorrido <= 0) {
         p.innerHTML = 'Parar alarme'
         pararTimer()
-        som.correntTime = 135
+        som.currentTime = 14
+        // Parte do alarme css
+        alarme.classList.add('active')
+       
         som.play()
-        alert('Tempo Acabou')
         return 
     }
     tempoDecorrido -= 1
     mostrarTimer(); 
-}
+} 
+       
+
+
+
+//// alarme 
+        alarme.addEventListener('click', () => {
+        alarme.classList.remove('active')
+        som.pause()
+        })
+
+
 let idTimer
 let rodando = false
 
 function iniciarTimer() {
-    // btn.innerHTML = 'Parar Cronometro' 
+    if (rodando) return
+    p.parentElement.style.display = 'flex'
+    btn.parentElement.style.display = 'none'
+    
+    
     idTimer = setInterval(decrescerTimer, 1000)
     rodando = true
 }
 
+
 function pararTimer() {
     clearInterval(idTimer)
     rodando = false
+    
+    p.parentElement.style.display = 'none'
+    btn.parentElement.style.display = 'flex' 
+
+
+    
 }
         
-
+// agora começa, precisa fazer a pausa do timer, infelizmente
     // btn.addEventListener('click', () => {
     //     btn.innerHTML = 'Pausar temporizador'
 
@@ -117,5 +144,3 @@ function pararTimer() {
     // })
 
     
-
-
