@@ -67,7 +67,7 @@ function alterarConteudos(contexto, botaoClicado) {
     }
 }
 
-// Início codificação Temporizador
+
 const exibirTimerApp = document.getElementById('timer')
 let btn = document.querySelector('.app__card-primary-button')
 let p = document.querySelector('.app__card-second-button')
@@ -77,7 +77,7 @@ btn.addEventListener('click', iniciarTimer)
 p.addEventListener('click', pararTimer)
 reset.addEventListener('click', resetTimer)
 
-////////////// MEXER 
+////////////// Corrigir novamente
 function resetTimer() {
     if (banner.src.includes('foco.png')) {
         tempoDecorrido = 100
