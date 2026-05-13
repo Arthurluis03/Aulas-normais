@@ -4,9 +4,7 @@ const img = document.querySelector('.img')
 
 input.addEventListener(`keydown`, () =>{
 
-
-    
-buttonType.style.display = `block`  
+buttonType.style.display = `none`  
 buttonType.addEventListener('click', () =>{
     if(input.type === 'text'){
     input.setAttribute('type', 'password')
@@ -14,12 +12,17 @@ buttonType.addEventListener('click', () =>{
 } else {
     input.setAttribute('type', 'text')
     img.src = `../ex4 olho da senha/images/view.png`
+ 
+    }
+    })
+    }
+)
 
+
+input.addEventListener('keypress', ()=>{
     
-}
+    buttonType.style.display = `block` 
 
 })
-}
-)
 
 
