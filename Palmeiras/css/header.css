@@ -1,0 +1,29 @@
+:root {
+  --verde-palmeiras: #006437;
+  --verde-escuro: #004D2A;
+  --verde-vibrante: #008F4C;
+  --verde-oliva: #3A5F0B;
+  --verde-neon: #00C96B;
+}
+.header{
+    display: flex;
+    background-color: var(--verde-palmeiras);
+    border-radius: 20px;
+
+}
+
+.palmeiras {
+    width: 100%;
+    max-width: 200px;
+    align-items: center;
+    justify-content: center;
+}
+.tPalmeiras{
+    display: flex;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+     font-weight: bold;
+    font-style: normal;
+   
+}
