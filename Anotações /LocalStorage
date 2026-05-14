@@ -1,0 +1,40 @@
+localStorage.steItem("chave", "valor`
+
+
+chave é o nome que vc quer dá ao dado 
+ex = 'cor preferida'
+
+valor é a informação guardada  
+
+ex = 'azul'
+
+
+
+getItem == você passa apenas a chave e ele te devolve o valor, se a chave não existe ele volta Null
+
+const variável = localStorage.getItem(chave)
+
+
+
+Para remover um dado especifico: 
+
+localStorage.removeItem(chave)
+
+para limpar tudo: 
+
+localStorage.clear();
+
+
+
+Informações importantes:
+
+apenas strings, se vc entar salvar o numero 10, o localStorage vai converter em string '10' para isso números
+
+
+usamos o JSON.stringify() transforma objeto em string (para enviar ou salvar)
+
+
+JSON.parse() --> transforma string em objeto (para ler e usar)
+
+
+TUDO tem um limite, ele tem um limite cerca de 5MB por domínio, pode variar entre navegadores
