@@ -1,0 +1,28 @@
+const input = document.querySelector('[type = password]')
+const buttonType = document.getElementById('type')
+const img = document.querySelector('.img')
+
+input.addEventListener(`keydown`, () =>{
+
+    buttonType.style.display = `none`  
+    buttonType.addEventListener('click', () =>{
+    if(input.type === 'text'){
+    input.setAttribute('type', 'password')
+    img.src = `../ex4 olho da senha/images/hide.png`
+} else {
+    input.setAttribute('type', 'text')
+    img.src = `../ex4 olho da senha/images/view.png`
+
+    }
+    })
+    }
+)
+
+
+input.addEventListener('keypress', ()=>{
+    
+    buttonType.style.display = `block` 
+
+})
+
+
