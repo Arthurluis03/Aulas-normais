@@ -1,8 +1,17 @@
+:root {
+  --verde-palmeiras: #006437;
+  --verde-escuro: #004D2A;
+  --verde-vibrante: #008F4C;
+  --verde-oliva: #3A5F0B;
+  --verde-neon: #00C96B;
+}
+
+
 body{
-    
     font-family: "Inter", sans-serif;
      font-weight: bold;
     font-style: normal;
+    background-color: var(--verde-vibrante);
 }
 
 
@@ -12,13 +21,37 @@ body{
     flex-direction: column;
     align-items: center;
     margin: 80px auto;
+    border: 3px solid green;
+    border-radius: 20px;
+    background-color: var(--verde-neon);
+    max-width: 400px;
 }
 summary {
-  list-style: none; /* Esconde o marcador padrão */
+  list-style: none; 
+  background-color: var(--verde-neon);
+}
+
+.coluna, .coluna2   {
+    display: flex;  
+    flex-direction: column;
+   
+}
+
+.btnescalar, .btnremover{
+    max-width: 100px;
+    background-color: var(--verde-vibrante);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
 }
 
 .txt2 {
     display: flex;
     margin: auto;
     justify-content: center;
+    background-color: var(--verde-neon);
+    border: 3px solid green;
+    max-width: 300px;
+    border-radius: 20px;
 }

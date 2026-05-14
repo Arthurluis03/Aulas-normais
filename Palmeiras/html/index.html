@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Escalação de Time</title>
     <script src="../script/script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -26,6 +26,7 @@
       
     <details>
   <summary><h1>Escalar jogador</h1></label></summary>
+      <div class="coluna">
       <label for="NamePlayer">Nome do jogador</label>
       <input placeholder="Nome do jogador" type="text" id="NamePlayer" />
 
@@ -63,21 +64,24 @@
       placeholder="Número da camisa"
       type="number" 
       id="NumberShirt" />
-      <button id="btnEscalar" type="button">Escalar</button>
+      <button class="btnescalar" id="btnEscalar" type="button">Escalar</button>
       </details>
+      </div>
     </div>
             
         <div class="remover">
-            
+              <div class="coluna2">
             <details>
             <summary><h2>Remover Jogador</h2></label></summary>
+              <p>Remover Jogador pela camisa</p>
              <label for="RemoveNumberShirt">Número da camisa</label>
             <input  
             placeholder="Digite o número da camisa para remover um jogador"
             class="RemoveNumberShirt" 
             type="number" 
             id="RemoveNumberShirt" />
-            <button id="btnRemover" type="button">Remover</button>
+            <button class="btnremover" id="btnRemover" type="button">Remover</button>
+            </div>
         </div>
 
         <h2 class="txt2" id="txt2">ESCALAÇÃO : </h2>

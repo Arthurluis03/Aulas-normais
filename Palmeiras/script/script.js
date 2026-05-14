@@ -1,13 +1,11 @@
 const NamePlayer = document.getElementById("NamePlayer");
 const PositionPlayer = document.getElementById("PositionPlayer");
 const NumberShirt = document.getElementById("NumberShirt");
-
 const Escalar = document.getElementById("btnEscalar");
 const Remover = document.getElementById("btnRemover");
-
 const RemovePlayer = document.getElementById("RemoveNumberShirt");
-
 const h2 = document.querySelector(".txt2");
+
 
 let Array__NamePlayer = [];
 let Array__PositionPlayer = [];
@@ -46,9 +44,7 @@ Remover.addEventListener("click", () => {
     Array__PositionPlayer.splice(posicao, 1);
     Array__NumberShirt.splice(posicao, 1);
     alert("JOGADOR REMOVIDO");
-    NamePlayer.value = "";
-    PositionPlayer.value = "";
-    NumberShirt.value = "";
+    RemovePlayer.value = ""
     atualizarTela()
   } else {
     alert("Numero não encontrado");
