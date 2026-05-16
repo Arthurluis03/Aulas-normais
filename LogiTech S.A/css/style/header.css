@@ -1,0 +1,55 @@
+
+
+
+summary{
+    list-style: none;
+    
+}
+
+
+.logo-icon{
+    width: 40px;
+    align-items: center;
+    margin: auto;
+    
+}
+
+
+ 
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: var(--principal)
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+ 
+}
+
+#Password_Admin{
+    border: none;
+    color: black;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: var(--fundo);
+    font-size: small;
+}
+#Input_Admin{
+    border: none;
+    border-radius: 20px
+}
+  

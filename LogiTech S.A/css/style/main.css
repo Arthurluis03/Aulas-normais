@@ -1,0 +1,212 @@
+:root {
+  --principal: #bff3ff;
+  --fundo: #f1fdff;
+  --fundo-botao: #1fa6cfff;
+  --nsei: #99fdff;
+}
+.maintotal {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+::placeholder {
+  color: white;
+  text-align: center;
+}
+
+#NamePeople,
+#Section,
+#Room {
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  background: black;
+  color: white;
+  font-size: small;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+  gap: 30px;
+}
+#cadastrar {
+  margin: 10px;
+  border: none;
+
+  border-radius: 10px;
+  padding: 10px 15px;
+  background: black;
+  color: white;
+  cursor: pointer;
+  font-size: small;
+}
+
+#cadastrar:hover {
+  background: #333;
+}
+
+#imgLogi {
+  max-width: 350px;
+  max-height: 350px;
+}
+
+.Radio {
+  width: 100%;
+  cursor: pointer;
+
+  margin: 30px auto;
+  padding: 10px;
+  justify-content: center;
+  display: flex;
+  background-color: var(--principal);
+}
+#Timer {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  margin: 10px auto;
+  gap: 10px;
+}
+input[type="time"] {
+    
+  padding: 5px;
+  border-radius: 8px;
+  background: #0f172a;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#Password {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px var(--principal);
+
+  background-color: black;
+  color: white;
+}
+
+#ButtonView, #ButtonView2 {
+  background: none;
+  border: none;
+}
+
+.senha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.senha input {
+  flex: 1;
+  min-width: 0;
+}
+
+.senha button {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+#View2{
+    width: 25px;
+  height: 25px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+.senha button img {
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+  margin-bottom: -5px;
+
+}
+
+#remove {
+  justify-content: center;
+  display: flex;
+}
+
+.Tabela_Salas {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+#openPanel {
+  border-radius: 10px;
+  display: flex;
+  margin:  auto;
+  width: 100%;
+  height: 30px;
+  padding: 50px;
+}
+
+#panel {
+  color: black;
+  background-color: var(--principal);
+  margin: 50px;
+}
+
+#remo {
+  cursor: pointer;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+
+}
+
+#Password_Delete,
+#Room_Delete::placeholder {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  color: black;
+}
+#Password_Delete::placeholder {
+  margin: auto;
+  color: black;
+}
+#Room_Delete, #Password_Delete {
+    margin: 10px auto;
+    display: flex;
+    border-radius: 10px;
+    
+    padding: 5px;
+    
+}
+#remover {
+  display: flex;
+  margin: auto;
+  border-radius: 10px;
+
+  
+}
+
+#cadastrar{
+    margin: 30px auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px 20px;
+}
+
+
+
+
+#space  {
+    background-color: var(--principal);
+    height: 60px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+}

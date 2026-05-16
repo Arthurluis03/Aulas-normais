@@ -1,0 +1,16 @@
+@import url('../css/style/main.css');
+@import url('../css/style/header.css');
+body{
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    background-color: var(--fundo);
+    grid-template-columns: (1fr 1fr);
+}
+:root {
+    --principal: #bff3ff; 
+    --fundo: #f1fdff;  
+    --fundo-botao: #1FA6CFFF;
+    
+}

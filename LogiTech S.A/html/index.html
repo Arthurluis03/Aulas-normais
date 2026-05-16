@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LogiTech S.A</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+ 
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+  <style>
+    
+  
+</style>
+
+<header>
+  <div class="logo">
+    <img src="../images/Frame 1.png" class="logo-icon">
+    LogiTech S.A
+  </div>
+   <details>
+    
+    <summary class="Admin_css">
+        Admin
+    </summary>
+    <p>Acesso de admin</p>
+    <input type="text" name="Admin" id="Input_Admin"> 
+    <button type="button" id="Password_Admin">Confirmar</button>
+  </details>
+</header>
+
+  <main>
+      <section class="Tabela_Salas" >
+    <h1 id="openPanel">Salas Reservadas</h1>
+      <!-- hidden -->
+    <div id="panel" class="hidden">
+      <h2>Salas disponíveis</h2>
+
+       <table border="1">
+         <thead>
+             <tr>
+                 <th>Nome</th>
+                 <th>Setor</th>
+                 <th>Sala</th>
+                 <th>Início</th>
+                 <th>Fim</th>
+                 <th>Turno</th>
+            </tr>
+         </thead>
+
+        <tbody id="tabela"></tbody>
+    </table>
+        <tbody id="tableBody"></tbody>
+      </table>
+
+    </div>
+    </section>
+ <div id="space"><h1>Registro</h1></div>
+</div>
+
+
+
+    
+    <section class="maintotal">
+    <!-- chaves -->
+    <div class="chaves">
+
+      <input placeholder="Nome da pessoa" id="NamePeople" type="text" />
+
+      <input placeholder="Selecione um Setor"  list="secao" id="Section" required/>
+
+      <datalist id="secao">
+        <option value="H">Setor H</option>
+        <option value="C">Setor C</option>
+        <option value="D">Setor D</option>
+        <option value="J">Setor J</option>
+      </datalist>
+
+
+      <input placeholder="Sala" id="Room" type="text" list="rooms" />
+      <datalist id="rooms"></datalist>
+
+      
+
+      
+    </main>
+      <!-- radio -->
+      <main class="maintime">
+      <div class="Radio">
+        <input
+          type="radio"
+          id="Radio_Morning"
+          name="Hour"
+          value="Manhã"
+          checked
+        />
+        <label for="Radio_Morning">Manhã</label><br />
+        <input type="radio" id="Radio_Late" name="Hour" value="Tarde" />
+        <label for="Radio_Late">Tarde</label><br />
+
+        <input type="radio" id="Radio_Night" name="Hour" value="Noite" />
+        <label for="Radio_Night">Noite</label>
+      </div>
+
+      <div id="Timer">
+      <input id="FirstHour" type="time" />
+      <input id="LastHour" type="time" />
+      </div>
+
+      <div class="senha">
+      <input placeholder="Digite uma senha de salvamento * " type="password" name="Senha" id="Password">  
+     <button type="button" id="ButtonView"> <img id="View" src="../images/view.png" alt=""></button>
+    </div>
+
+      
+    <button type="button" id="cadastrar">Cadastrar</button>
+      
+
+
+    </section>
+    </main>
+
+    <div id="remo">
+    <details>
+    <summary>
+    <h3>Remover Posse de Sala</h3>
+    </summary>
+
+    <input type="text" id="Room_Delete" placeholder="Sala (ex: D1)">
+
+    <input type="password" id="Password_Delete" placeholder="Senha de exclusão">
+    <!-- <button type="button" id="ButtonView2"> <img id="View" src="../images/view.png" alt=""></button> -->
+    <div id="remove">
+      <button type="button" id="remover">Remover</button>
+      </div>
+
+     </details>
+    </div>
+
+    <script type="module" src="/src/main.js" defer></script>
+  
+  </body>
+</html>
